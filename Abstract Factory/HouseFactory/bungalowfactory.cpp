@@ -12,7 +12,15 @@ BungalowFactory::~BungalowFactory()
 	std::cout << "Destroyed a bungalow factory" << std::endl;
 }
 
-std::shared_ptr<House> BungalowFactory::makeHouse()
+std::shared_ptr<House> BungalowFactory::makeHouse() const
 {
-    return nullptr;
+	std::shared_ptr<House> bungalow = std::make_shared<House>();
+
+	if (bungalow != nullptr)
+	{
+		bungalow->setNumerOfFloors(1);
+		bungalow->setNumberOfBasements(0);
+	}
+
+	return bungalow;
 }
