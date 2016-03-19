@@ -7,8 +7,10 @@ cmake_minimum_required(VERSION 2.8)
 #  message("${i}")
 #endforeach()
 
-aux_source_directory(. SRC_LIST)
-add_executable(${PROJECT_NAME} ${SRC_LIST})
+file(GLOB SOURCES "*.cpp")
+file(GLOB HEADERS "*.h")
+
+add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})
 
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_nullptr)
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_override)
