@@ -2,5 +2,5 @@
 
 House *BlockOfFlatsFactory::makeHouse()
 {
-
+	return nullptr;
 }
