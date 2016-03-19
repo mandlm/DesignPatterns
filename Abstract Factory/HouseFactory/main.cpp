@@ -17,6 +17,8 @@ HouseType queryHouseType()
 	{
 		char selection;
 
+		std::cout << std::endl;
+
 		std::cout << "Please choose your type:" << std::endl;
 		std::cout << "(1) Bungalow" << std::endl;
 		std::cout << "(2) Block of flats" << std::endl;
@@ -55,7 +57,23 @@ std::shared_ptr<HouseFactory> getHouseFactory(HouseType houseType)
 
 int main(int argc, char *argv[])
 {
-	std::shared_ptr<HouseFactory> houseFactory(getHouseFactory(queryHouseType()));
+	HouseType houseType = None;
 
-    return 0;
+	do
+	{
+		houseType = queryHouseType();
+
+		std::shared_ptr<HouseFactory> houseFactory = getHouseFactory(houseType);
+		if (houseFactory != nullptr)
+		{
+			std::shared_ptr<House> house = houseFactory->makeHouse();
+
+			if (house != nullptr)
+			{
+				std::cout << house->toString();
+			}
+		}
+	} while (houseType != None);
+
+	return 0;
 }
