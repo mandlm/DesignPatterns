@@ -40,14 +40,14 @@ HouseType queryHouseType()
 	}
 }
 
-HouseFactory *getHouseFactory(HouseType houseType)
+std::shared_ptr<HouseFactory> getHouseFactory(HouseType houseType)
 {
 	switch (houseType)
 	{
 	case Bungalow:
-		return new BungalowFactory;
+		return std::make_shared<BungalowFactory>();
 	case BlockOfFlats:
-		return new BlockOfFlatsFactory;
+		return std::make_shared<BlockOfFlatsFactory>();
 	default:
 		return nullptr;
 	}
@@ -55,8 +55,7 @@ HouseFactory *getHouseFactory(HouseType houseType)
 
 int main(int argc, char *argv[])
 {
-	std::unique_ptr<HouseFactory> houseFactory(getHouseFactory(queryHouseType()));
-	
+	std::shared_ptr<HouseFactory> houseFactory(getHouseFactory(queryHouseType()));
 
     return 0;
 }
