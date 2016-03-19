@@ -7,6 +7,6 @@
 class HouseFactory
 {
 public:
-    virtual std::shared_ptr<House> makeHouse() = 0;
+    virtual std::shared_ptr<House> makeHouse() const = 0;
 };
 

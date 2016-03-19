@@ -8,6 +8,6 @@ public:
 	BlockOfFlatsFactory();
 	~BlockOfFlatsFactory();
 
-    virtual std::shared_ptr<House> makeHouse() override;
+    virtual std::shared_ptr<House> makeHouse() const override;
 };
 
