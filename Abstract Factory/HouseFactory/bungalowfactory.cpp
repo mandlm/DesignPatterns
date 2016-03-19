@@ -12,7 +12,7 @@ BungalowFactory::~BungalowFactory()
 	std::cout << "Destroyed a bungalow factory" << std::endl;
 }
 
-House *BungalowFactory::makeHouse()
+std::shared_ptr<House> BungalowFactory::makeHouse()
 {
-    return new House;
+    return nullptr;
 }

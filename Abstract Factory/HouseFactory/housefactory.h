@@ -1,10 +1,12 @@
 #pragma once
 
+#include <memory>
+
 #include "house.h"
 
 class HouseFactory
 {
 public:
-    virtual House *makeHouse() = 0;
+    virtual std::shared_ptr<House> makeHouse() = 0;
 };
 

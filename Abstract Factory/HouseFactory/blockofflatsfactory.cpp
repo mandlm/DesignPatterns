@@ -12,7 +12,7 @@ BlockOfFlatsFactory::~BlockOfFlatsFactory()
 	std::cout << "Destroyed a block of flats factory" << std::endl;
 }
 
-House *BlockOfFlatsFactory::makeHouse()
+std::shared_ptr<House> BlockOfFlatsFactory::makeHouse()
 {
 	return nullptr;
 }

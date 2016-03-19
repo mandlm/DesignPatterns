@@ -8,5 +8,5 @@ public:
 	BungalowFactory();
 	~BungalowFactory();
 
-    virtual House *makeHouse() override;
+    virtual std::shared_ptr<House> makeHouse() override;
 };
