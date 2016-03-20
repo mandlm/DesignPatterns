@@ -1,5 +1,7 @@
 #pragma once
 
+#include <memory>
+
 #include "housefactory.h"
 
 class BlockOfFlatsFactory : public HouseFactory
