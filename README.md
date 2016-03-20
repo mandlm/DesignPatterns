@@ -9,7 +9,7 @@ My goal is to implement each pattern in a non-trivial manner using a more or les
 ### Creational Patterns
 
 * [Abstract Factory](https://github.com/mandlm/DesignPatterns/tree/master/Abstract%20Factory/HouseFactory)
-* Builder
+* [Builder](https://github.com/mandlm/DesignPatterns/tree/master/Builder/SceneExporter)
 * Factory Method
 * Prototype
 * Singleton
