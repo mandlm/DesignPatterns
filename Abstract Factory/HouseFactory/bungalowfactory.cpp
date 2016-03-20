@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+#include "bungalow.h"
+
 BungalowFactory::BungalowFactory()
 {
 	std::cout << "Created a bungalow factory" << std::endl;
@@ -14,7 +16,7 @@ BungalowFactory::~BungalowFactory()
 
 std::shared_ptr<House> BungalowFactory::makeHouse() const
 {
-	std::shared_ptr<House> bungalow = std::make_shared<House>();
+    std::shared_ptr<House> bungalow = std::make_shared<Bungalow>();
 
 	if (bungalow != nullptr)
 	{
